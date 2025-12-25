@@ -1,0 +1,149 @@
+1. Path Traversal / File Inclusion
+
+include(), include_once()
+require(), require_once()
+fopen(), file_get_contents()
+file_put_contents(), file()
+readfile(), parse_ini_file()
+copy(), unlink(), rmdir()
+file_exists(), is_readable()
+is_writable(), is_file()
+mkdir(), rename()
+tempnam(), tmpfile()
+dirname(), chdir(), chroot()
+glob(), opendir(), scandir()
+fwrite(), fputs()
+fileatime(), filectime(), filemtime()
+highlight_file(), show_source()
+
+2. SQL Injection
+
+mysqli_query(), mysqli_real_query()
+mysql_query() (deprecated)
+pg_query(), pg_send_query()
+PDO::query(), PDO::exec()
+sqlite_query() (deprecated)
+db2_exec(), mssql_query()
+oci_execute()
+odbc_exec(), odbc_prepare()
+
+3. Command Injection
+
+exec(), system()
+shell_exec(), passthru()
+popen(), proc_open()
+pcntl_exec()
+`` (backticks) - Syntax for shell_exec
+escapeshellarg(), escapeshellcmd()
+
+4. Code Injection
+Code Execution
+
+eval(), assert()
+preg_replace() + modifier /e (PHP < 7.0)
+create_function() (deprecated)
+include(), require()
+$$var (variable variables)
+$func() (variable functions)
+call_user_func(), call_user_func_array()
+ReflectionFunction
+
+5. Cross-Site Scripting (XSS)
+
+echo, print, printf()
+print_r(), var_dump(), var_export()
+<?= ... ?>
+header()
+htmlspecialchars() (not use ENT_QUOTES)
+strip_tags() 
+htmlentities()
+
+6. CSRF (Cross-Site Request Forgery)
+
+hash_hmac() 
+hash_equals()
+random_bytes(), openssl_random_pseudo_bytes() 
+
+7. Deserialize Attack
+
+unserialize()
+yaml_parse()
+simplexml_load_string(), simplexml_load_file()
+DOMDocument::loadXML(), DOMDocument::load()
+
+8. File Upload Vulnerabilities
+
+move_uploaded_file()
+is_uploaded_file()
+exif_imagetype()
+getimagesize()
+
+9. Session Security
+
+session_start()
+session_regenerate_id() 
+session_set_cookie_params()
+setcookie()
+
+10. Information Disclosure
+
+phpinfo()
+error_reporting(), display_errors
+print_r(), var_dump()
+debug_backtrace(), debug_print_backtrace()
+
+11. Cryptographic Issues
+
+md5(), sha1()
+crypt() (use weak salt)
+rand(), mt_rand()
+mcrypt_encrypt()
+srand(), mt_srand()
+password_hash(), password_verify()
+random_bytes(), random_int()
+openssl_encrypt(), sodium_* (PHP 7.2+)
+
+12. Object Injection
+
+__wakeup(), __destruct()
+__toString(), __call()
+
+13. XML Processing
+
+SimpleXML functions
+xml_parse(), xml_parse_into_struct()
+DOMDocument::loadXML(), simplexml_load_string()
+XmlReader::open()
+
+14. LDAP Injection
+
+ldap_search()
+ldap_list()
+ldap_read()
+ldap_bind()
+
+15. SSRF (Server-Side Request Forgery)
+
+file_get_contents() (với URL)
+curl_exec(), curl_multi_exec()
+fsockopen(), pfsockopen()
+ftp_connect(), ftp_ssl_connect()
+stream_context_create()
+
+17. Race Conditions
+
+file_exists() + fopen()
+is_file() + file operations
+flock()
+mkdir()
+
+18. Others
+
+extract()
+parse_str()
+putenv()
+ini_set()
+mail()
+preg_replace()
+register_globals (old PHP)
+allow_url_include, allow_url_fopen
