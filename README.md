@@ -1,18 +1,24 @@
 *INSTALLATION*
 
+
 wget https://github.com/joernio/joern/releases/latest/download/joern-install.sh
 chmod +x ./joern-install.sh
 sudo ./joern-install.sh
 
+
 *USING*
 
+
 Locate install: /opt/joern
+
+
 Step1: import source code
 
 ```
 joern
 importCode("path/to/php/project")
 ```
+
 
 Step2: Source declaration
 
@@ -24,6 +30,7 @@ cpg.call(): Query Call nodes in the Code Property Graph
 <operator>.indexAccess: represents the array/index element access operator
 -> Get all in code with access type GET[index]|POST[index]|REQUEST[index] - User input
 
+
 Step3: Sink declaration
 
 ```
@@ -32,6 +39,7 @@ val sink = cpg.call("(system|shell_exec|exec|passthru|popen|proc_open)").argumen
 
 Regex method finding
 .argument(1): gets the 1st parameter of the function call
+
 
 Step4: Run
 
