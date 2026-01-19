@@ -1,10 +1,10 @@
 *INSTALLATION*
 
-
+```
 wget https://github.com/joernio/joern/releases/latest/download/joern-install.sh
 chmod +x ./joern-install.sh
 sudo ./joern-install.sh
-
+```
 
 *USING*
 
